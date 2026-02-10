@@ -39,6 +39,12 @@ All data processed in PostgreSQL/PostGIS.
    - PL/pgSQL function `get_population_served`: computes population within 500 m using `ST_Buffer`, `ST_Clip`, `ST_SummaryStats`  
    - Added `pop_served_500m` to full `water_points` table
 
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/PostGIS%20workflow.png" />
+</p>
+
+
+
 2. **Clustering of non-functional points**  
    - Table `non_functional_points` (~15,232 rows)  
    - `ST_ClusterDBSCAN` (eps ≈ 1 km, minpoints = 5) → `cluster_id`  
@@ -47,6 +53,7 @@ All data processed in PostgreSQL/PostGIS.
 3. **Cluster summarization**  
    - Per-cluster: size, avg `pop_served_500m`, centroid  
    - Exported as GeoJSON (`clusters_points.geojson`, `clusters_centroids.geojson`)
+  
 
 ## 4. Machine Learning – Failure Risk Prediction (Kenya-wide)
 
@@ -73,6 +80,11 @@ All data processed in PostgreSQL/PostGIS.
 7. dist_to_functional
 8. age
 
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Feature%20Importance.png" />
+</p>
+
+
 **Interpretation**:
 - Electric motorized pumps and public tapstands are the strongest failure predictors — likely due to power issues, high usage, and maintenance challenges.
 - Spatial clustering (large clusters, high cluster population density) strongly elevates risk.
@@ -90,14 +102,25 @@ While the core analysis was conducted nationwide (to maximize data for clusterin
 - Risk score distribution in Nairobi: mean ~0.064, max ~0.623 (much lower than national high-risk areas)
 - Top risk points in Nairobi: mostly functional motorized pumps (age 17–36 years), with max risk ~0.623
 
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Results.png" />
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Nairobi%20Risk.png" />
+</p>
+
 **High-risk filtering**:
 - Nationwide high-risk points (>50% threshold): ~13,014
 - In Nairobi bounds (>50%): **2 points**
 - Final Nairobi high-risk GeoJSON exported (`high_risk_nairobi.geojson`) for visualization and ArcGIS Online publishing
 
+
+
 **Nairobi insight**:
-- Nairobi shows significantly lower predicted failure risk compared to national averages — likely due to better access, newer infrastructure, or urban maintenance advantages.
-- The few high-risk points are associated with motorized pumps — consistent with the national top driver.
+- Nairobi shows significantly lower predicted failure risk compared to national averages, likely due to better access, newer infrastructure, or urban maintenance advantages.
+- The few high-risk points are associated with motorized pumps, consistent with the national top driver.
 
 ## 6. Visualization & Deliverables
 
@@ -106,6 +129,21 @@ While the core analysis was conducted nationwide (to maximize data for clusterin
 - Clustered non-functional points (colored by cluster_id)
 - Cluster centroids (size-scaled)
 - High-risk points (nationwide + Nairobi subset) in red
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/clusters_kepler.png" />
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Water_risk_kepler.png" />
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Nairobi_leaflet_map.png" />
+</p>
+
 
 **Exported files**:
 - `clusters_points.geojson` & `clusters_centroids.geojson`
@@ -121,4 +159,4 @@ The project delivered a robust national-level analysis of water point risks in K
 - Electric motorized pumps and public tapstands are the most failure-prone technologies
 - Large non-functional clusters (especially in high-population areas) are major underserved zones
 - Predictive model (AUC 0.9735) effectively identifies risk drivers
-- Nairobi shows **lower overall risk** (mean ~0.064, max ~0.623) compared to national hotspots — likely reflecting urban advantages
+- Nairobi shows **lower overall risk** (mean ~0.064, max ~0.623) compared to national hotspots, likely reflecting urban advantages
