@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "high_risk_nairobi",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "wpdx_id": "6GCRRJ6J+C96", "lat_deg": -1.1889701, "lon_deg": 36.63089, "status_clean": "Functional", "pop_served_500m": 537.8265438079834, "install_year": 2009.0, "is_urban": "f", "water_source_clean": "Borehole/Tubewell", "water_tech_clean": "Motorized Pump", "geom_wkt": "POINT(36.63089 -1.1889701)", "cluster_id": null, "target": 0, "age": 17.0, "dist_to_functional": 0.014395282595350519, "in_cluster": 0, "cluster_size": 0.0, "cluster_avg_pop": 0.0, "failure_risk_score": 0.62322277 }, "geometry": { "type": "Point", "coordinates": [ 36.63089, -1.1889701 ] } },
+{ "type": "Feature", "properties": { "wpdx_id": "6GCRVR49+93Q", "lat_deg": -1.1440439, "lon_deg": 36.817749, "status_clean": "Functional", "pop_served_500m": 1243.2730703353882, "install_year": 2009.0, "is_urban": "f", "water_source_clean": "Borehole/Tubewell", "water_tech_clean": "Motorized Pump", "geom_wkt": "POINT(36.817749 -1.1440439)", "cluster_id": null, "target": 0, "age": 17.0, "dist_to_functional": 0.012672502926022402, "in_cluster": 0, "cluster_size": 0.0, "cluster_avg_pop": 0.0, "failure_risk_score": 0.54572576 }, "geometry": { "type": "Point", "coordinates": [ 36.817749, -1.1440439 ] } }
+]
+}
