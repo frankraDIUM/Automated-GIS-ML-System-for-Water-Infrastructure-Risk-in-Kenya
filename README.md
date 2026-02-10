@@ -1,5 +1,7 @@
 # Automated GIS-ML System for Water Infrastructure Risk in Kenya
-This project builds an automated, end-to-end GIS and machine learning pipeline to analyze water point infrastructure risk across Kenya, with a focused application in Nairobi County. Interact on Kepler  [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/pclqq358c1ya1qahw0rh8/keplergl_z7vj22j.json?rlkey=vtjpcyfb02svs0tbebilc8xlh&dl=0)</button> . View on ArcGIS online: [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://arcg.is/14zWq00)</button>
+This project builds an automated, end-to-end GIS and machine learning pipeline to analyze water point infrastructure risk across Kenya, with a focused application in Nairobi County. 
+Interact on Kepler  [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/r69qfiwd43n13lv7giw7a/keplergl_r8mzmej.json?rlkey=2ctw7f4h2ua0rbfr0vcq09xik&dl=0)</button>. 
+View on ArcGIS online: [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://arcg.is/14zWq00)</button>
 
 ## 1. Project Objective
 
@@ -80,6 +82,7 @@ All data processed in PostgreSQL/PostGIS.
 7. dist_to_functional
 8. age
 
+Feature Importance
 <p align="center">
   <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Feature%20Importance.png" />
 </p>
@@ -107,6 +110,7 @@ While the core analysis was conducted nationwide (to maximize data for clusterin
 </p>
 
 
+Nairobi Risk
 <p align="center">
   <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Nairobi%20Risk.png" />
 </p>
@@ -130,16 +134,19 @@ While the core analysis was conducted nationwide (to maximize data for clusterin
 - Cluster centroids (size-scaled)
 - High-risk points (nationwide + Nairobi subset) in red
 
+Clusters_points&centroids
 <p align="center">
   <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/clusters_kepler.png" />
 </p>
 
 
+High-risk Points Nationwide
 <p align="center">
   <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Water_risk_kepler.png" />
 </p>
 
 
+High-risk Points Nairobi
 <p align="center">
   <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/Nairobi_leaflet_map.png" />
 </p>
@@ -151,7 +158,7 @@ While the core analysis was conducted nationwide (to maximize data for clusterin
 - `high_risk_nairobi.geojson` (Nairobi-focused)
 - `master_water_risk_prioritization.csv` (full dataset with risk scores)
 
-## 7. Conclusions
+## 7. Conclusion
 
 The project delivered a robust national-level analysis of water point risks in Kenya, with Nairobi County highlighted as a high-priority urban case study.
 
