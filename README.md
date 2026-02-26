@@ -89,7 +89,7 @@ Feature Importance
 
 
 **Interpretation**:
-- Electric motorized pumps and public tapstands are the strongest failure predictors — likely due to power issues, high usage, and maintenance challenges.
+- Electric motorized pumps and public tapstands are the strongest failure predictors, likely due to power issues, high usage, and maintenance challenges.
 - Spatial clustering (large clusters, high cluster population density) strongly elevates risk.
 - Distance to nearest functional point and age are meaningful secondary factors.
 
