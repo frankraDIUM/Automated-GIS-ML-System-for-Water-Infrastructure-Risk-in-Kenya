@@ -1,7 +1,16 @@
-# Automated GIS-ML System for Water Infrastructure Risk in Kenya
+# 🚰 Automated GIS-ML System for Water Infrastructure Risk in Kenya
 This project builds an automated, end-to-end GIS and machine learning pipeline to analyze water point infrastructure risk across Kenya, with a focused application in Nairobi County. 
 Interact on Kepler  [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/r69qfiwd43n13lv7giw7a/keplergl_r8mzmej.json?rlkey=2ctw7f4h2ua0rbfr0vcq09xik&dl=0)</button>. 
 View on ArcGIS online: [![View](https://img.shields.io/badge/View-Click%20Here-blue)](https://arcg.is/14zWq00)</button>
+
+---
+Map Preview
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Automated-GIS-ML-System-for-Water-Infrastructure-Risk-in-Kenya/blob/main/water.gif" />
+</p>
+
+---
 
 ## 1. Project Objective
 
